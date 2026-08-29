@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 64" role="img" aria-label="colophon">
+  <rect width="1200" height="64" fill="#0B0E14"/>
+  <line x1="16" y1="1" x2="1184" y2="1" stroke="#2A3144"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#7A8499">
+    <text x="16" y="38">END OF SHEET</text>
+    <text x="600" y="38" text-anchor="middle" fill="#C4B5FD">&#x52A0;&#x6CB9;&#x6BCF;&#x4E00;&#x5929;</text>
+    <text x="1184" y="38" text-anchor="end">endlessYoung</text>
+  </g>
+</svg>

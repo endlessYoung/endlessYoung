@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" role="img" aria-label="Jetpack Compose Coroutines MVVM Agents RAG">
+  <rect width="1200" height="120" fill="#0B0E14"/>
+  <rect x="12" y="18" width="1176" height="84" fill="#121826" stroke="#2A3144"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" text-anchor="middle">
+    <rect x="36" y="34" width="168" height="52" rx="4" fill="#0B0E14" stroke="#3B82F6"/>
+    <text x="120" y="65" fill="#EAF1FF">Jetpack</text>
+
+    <rect x="228" y="34" width="168" height="52" rx="4" fill="#0B0E14" stroke="#60A5FA"/>
+    <text x="312" y="65" fill="#EAF1FF">Compose</text>
+
+    <rect x="420" y="34" width="168" height="52" rx="4" fill="#0B0E14" stroke="#8B5CF6"/>
+    <text x="504" y="65" fill="#F3EEFF">Coroutines</text>
+
+    <rect x="612" y="34" width="168" height="52" rx="4" fill="#0B0E14" stroke="#A855F7"/>
+    <text x="696" y="65" fill="#F3EEFF">MVVM</text>
+
+    <rect x="804" y="34" width="168" height="52" rx="4" fill="#0B0E14" stroke="#C084FC"/>
+    <text x="888" y="65" fill="#F3EEFF">Agents</text>
+
+    <rect x="996" y="34" width="168" height="52" rx="4" fill="#0B0E14" stroke="#E879A9"/>
+    <text x="1080" y="65" fill="#FFEAF6">RAG</text>
+  </g>
+</svg>

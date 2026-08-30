@@ -303,4 +303,6 @@ Also shipping **InjectAI**, **visual-roadmap**, **quilt**, and Clash Verge theme
 
 <div align="center">
   <img src="./assets/footer.svg" width="100%" alt="加油每一天"/>
+  <br/>
+  <img src="https://komarev.com/ghpvc/?username=endlessYoung&style=flat&color=7C3AED&label=PROFILE+VIEWS" alt="Profile views"/>
 </div>

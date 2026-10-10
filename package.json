@@ -1,0 +1,22 @@
+{
+  "name": "endlessyoung-profile",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsx scripts/build.ts",
+    "preview": "tsx scripts/preview.ts",
+    "readme": "tsx scripts/readme.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "fast-xml-parser": "^4.4.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}

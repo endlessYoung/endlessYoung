@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 280" width="1200" height="280" role="img" aria-label="Latest blog posts as logcat output">
+<defs>
+  <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#FFFFFF"/><stop offset="50%" stop-color="#C9D8F5"/><stop offset="100%" stop-color="#FFD166"/>
+  </linearGradient>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#3D6FC4" stroke-width="0.5" stroke-opacity="0.6"/>
+  </pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="0" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  
+</defs>
+<style>
+  .in { animation: in .45s ease-out both; }
+  .rise { animation: rise .5s ease-out both; }
+  .grow { animation: grow .6s ease-out both; transform-box: fill-box; transform-origin: left center; }
+  .pulse { animation: pulse 2.2s ease-in-out infinite; }
+  .blink { animation: blink 1s steps(1) infinite; }
+  .dash { stroke-dasharray: 5 9; animation: flow 1.8s linear infinite; }
+  .scan { animation: scan 6s ease-in-out infinite; }
+  @keyframes in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes pulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+  @keyframes blink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+  @keyframes flow { to { stroke-dashoffset: -56; } }
+  @keyframes scan { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .2; } 100% { transform: translateY(var(--scan-h, 260px)); opacity: 0; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; }
+    .hide-reduced { display: none; }
+  }
+</style>
+<rect width="1200" height="280" fill="#0B3D91"/>
+<rect x="12" y="12" width="1176" height="256" fill="url(#grid)" stroke="#9DB8E8" stroke-width="1"/>
+<g fill="none" stroke="url(#beam)" stroke-width="2"><path d="M12 44V12H44"/><path d="M1188 44V12H1156"/><path d="M12 236V268H44"/><path d="M1188 236V268H1156"/></g>
+
+
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
+  <text x="44" y="44" fill="#C9D8F5" font-size="11" letter-spacing="2">STAGE 08 · LOGCAT</text>
+  <text x="44" y="62" fill="#FFFFFF"><tspan fill="#A7F3D0">$ </tspan>adb logcat -s Blog:* <tspan fill="#C9D8F5">--format=threadtime</tspan></text>
+  <line x1="44" y1="70" x2="1156" y2="70" stroke="#9DB8E8"/>
+  <g class="in" style="animation-delay:0.30s">
+  <rect x="36" y="75" width="1128" height="24" fill="#FFD166" fill-opacity="0.08"/>
+  <text x="44" y="92" fill="#C9D8F5">04-19 08:00:00.042</text>
+  <text x="222" y="92" fill="#C9D8F5">2048  2049</text>
+  <text x="322" y="92" fill="#FFD166" font-weight="700">W</text>
+  <text x="344" y="92" fill="#FFFFFF">Blog:</text>
+  <text x="392" y="92" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif" font-size="13">《生成式AI导论：从“文字接龙”说起》</text>
+  <rect x="1092" y="80" width="56" height="16" rx="8" fill="#FFD166"/><text x="1120" y="92" text-anchor="middle" fill="#0B3D91" font-size="9.5" font-weight="700">LATEST</text>
+</g><g class="in" style="animation-delay:0.65s">
+  
+  <text x="44" y="118" fill="#C9D8F5">02-10 08:00:00.179</text>
+  <text x="222" y="118" fill="#C9D8F5">2048  2050</text>
+  <text x="322" y="118" fill="#A7F3D0" font-weight="700">I</text>
+  <text x="344" y="118" fill="#FFFFFF">Blog:</text>
+  <text x="392" y="118" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif" font-size="13">《Compose布局系统与 Modifier》</text>
+  
+</g><g class="in" style="animation-delay:1.00s">
+  
+  <text x="44" y="144" fill="#C9D8F5">02-08 08:00:00.316</text>
+  <text x="222" y="144" fill="#C9D8F5">2048  2051</text>
+  <text x="322" y="144" fill="#A7F3D0" font-weight="700">I</text>
+  <text x="344" y="144" fill="#FFFFFF">Blog:</text>
+  <text x="392" y="144" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif" font-size="13">《Jetpack Compose 状态管理详解》</text>
+  
+</g><g class="in" style="animation-delay:1.35s">
+  
+  <text x="44" y="170" fill="#C9D8F5">07-01 08:00:00.453</text>
+  <text x="222" y="170" fill="#C9D8F5">2048  2052</text>
+  <text x="322" y="170" fill="#A7F3D0" font-weight="700">I</text>
+  <text x="344" y="170" fill="#FFFFFF">Blog:</text>
+  <text x="392" y="170" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif" font-size="13">《JobScheduler》</text>
+  
+</g><g class="in" style="animation-delay:1.70s">
+  
+  <text x="44" y="196" fill="#C9D8F5">04-21 08:00:00.590</text>
+  <text x="222" y="196" fill="#C9D8F5">2048  2053</text>
+  <text x="322" y="196" fill="#A7F3D0" font-weight="700">I</text>
+  <text x="344" y="196" fill="#FFFFFF">Blog:</text>
+  <text x="392" y="196" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif" font-size="13">《Channel》</text>
+  
+</g><g class="in" style="animation-delay:2.05s">
+  
+  <text x="44" y="222" fill="#C9D8F5">04-21 08:00:00.727</text>
+  <text x="222" y="222" fill="#C9D8F5">2048  2054</text>
+  <text x="322" y="222" fill="#A7F3D0" font-weight="700">I</text>
+  <text x="344" y="222" fill="#FFFFFF">Blog:</text>
+  <text x="392" y="222" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif" font-size="13">《协程上下文》</text>
+  
+</g>
+  <text x="44" y="254" fill="#A7F3D0">$ <tspan class="blink" fill="#FFFFFF">▍</tspan></text>
+</g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#C9D8F5" letter-spacing="1">
+  <rect x="888" y="234" width="300" height="34" fill="#0B3D91" stroke="#9DB8E8" stroke-width="1"/>
+  <line x1="888" y1="251" x2="1188" y2="251" stroke="#9DB8E8" stroke-width="0.6"/>
+  <line x1="1058" y1="234" x2="1058" y2="268" stroke="#9DB8E8" stroke-width="0.6"/>
+  <text x="896" y="246">DRAWN BY endlessYoung</text>
+  <text x="1066" y="246">SHEET 8 / 10</text>
+  <text x="896" y="263" fill="#FFFFFF">LOGCAT</text>
+  <text x="1066" y="263">SCALE 1:1</text>
+</g>
+</svg>

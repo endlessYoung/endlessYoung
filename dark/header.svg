@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="endlessYoung — boot sequence">
+<defs>
+  <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#7C5CFC"/><stop offset="50%" stop-color="#C084FC"/><stop offset="100%" stop-color="#E23CA9"/>
+  </linearGradient>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#1C2436" stroke-width="0.7" />
+  </pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3.5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#FFFFFF"/><stop offset="65%" stop-color="#EDE9FE"/><stop offset="100%" stop-color="#C084FC"/>
+  </linearGradient>
+</defs>
+<style>
+  .in { animation: in .45s ease-out both; }
+  .rise { animation: rise .5s ease-out both; }
+  .grow { animation: grow .6s ease-out both; transform-box: fill-box; transform-origin: left center; }
+  .pulse { animation: pulse 2.2s ease-in-out infinite; }
+  .blink { animation: blink 1s steps(1) infinite; }
+  .dash { stroke-dasharray: 5 9; animation: flow 1.8s linear infinite; }
+  .scan { animation: scan 6s ease-in-out infinite; }
+  @keyframes in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes pulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+  @keyframes blink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+  @keyframes flow { to { stroke-dashoffset: -56; } }
+  @keyframes scan { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .2; } 100% { transform: translateY(var(--scan-h, 260px)); opacity: 0; } }
+
+  .logs { animation: recede .9s ease-in 4s forwards; }
+  .ignite { animation: ignite 1.2s ease-out 4.1s both; transform-box: fill-box; transform-origin: center; }
+  .tagline { animation: in .8s ease-out 4.8s both; }
+  @keyframes recede { to { opacity: .16; transform: translateY(-12px); } }
+  @keyframes ignite { from { opacity: 0; transform: scale(.94); } 60% { opacity: 1; } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .logs { opacity: .16; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; }
+    .hide-reduced { display: none; }
+  }
+</style>
+<rect width="1200" height="360" fill="#07090F"/>
+<rect x="12" y="12" width="1176" height="336" fill="url(#grid)" stroke="#2A3348" stroke-width="1"/>
+<g fill="none" stroke="url(#beam)" stroke-width="2"><path d="M12 44V12H44"/><path d="M1188 44V12H1156"/><path d="M12 316V348H44"/><path d="M1188 316V348H1156"/></g>
+<rect class="scan hide-reduced" x="12" y="12" width="1176" height="14" fill="url(#beam)" opacity="0" style="--scan-h:322px"/>
+
+<g class="logs" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5"><text class="in" style="animation-delay:0.20s" x="44" y="52" fill="#C084FC">endlessYoung bootloader v26.10</text><text class="in" style="animation-delay:0.60s" x="44" y="69" fill="#8B93A7">fastboot: unlocked  ·  secure boot: verified</text><text class="in" style="animation-delay:1.00s" x="44" y="86" fill="#8B93A7">loading kernel @ 0x80080000 ...</text><text class="in" style="animation-delay:1.50s" x="44" y="113"><tspan fill="#34D399">[    0.000000]</tspan><tspan fill="#8B93A7"> Booting Linux on physical CPU 0x0</tspan></text><text class="in" style="animation-delay:1.80s" x="44" y="130"><tspan fill="#34D399">[    0.000000]</tspan><tspan fill="#8B93A7"> Linux version 6.6.30-endlessYoung (clang 19)</tspan></text><text class="in" style="animation-delay:2.10s" x="44" y="147"><tspan fill="#34D399">[    0.412093]</tspan><tspan fill="#8B93A7"> binder: /dev/binder registered</tspan></text><text class="in" style="animation-delay:2.40s" x="44" y="164"><tspan fill="#34D399">[    0.873551]</tspan><tspan fill="#8B93A7"> init: mounting /data ... curiosity.img</tspan></text><text class="in" style="animation-delay:2.70s" x="44" y="181"><tspan fill="#34D399">[    1.284117]</tspan><tspan fill="#8B93A7"> init: starting service &#39;zygote&#39;...</tspan></text><text class="in" style="animation-delay:3.00s" x="44" y="198"><tspan fill="#34D399">[    1.692840]</tspan><tspan fill="#8B93A7"> SystemServer: starting ActivityManagerService</tspan></text><text class="in" style="animation-delay:3.30s" x="44" y="215"><tspan fill="#34D399">[    2.031552]</tspan><tspan fill="#8B93A7"> binder: 1024:1024 transaction to endlessYoung</tspan></text><text class="in" style="animation-delay:3.60s" x="44" y="232"><tspan fill="#34D399">[    2.480001]</tspan><tspan fill="#8B93A7"> init: sys.boot_completed=1</tspan></text></g>
+<g class="info in" style="animation-delay:0.40s" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">
+  <rect x="956" y="40" width="208" height="104" rx="2" fill="#0C111C" stroke="url(#beam)" stroke-width="1"/>
+  <text x="972" y="66" fill="#8B93A7">OWNER</text><text x="1040" y="66" fill="#F3EEFF">foreverYoung</text><text x="972" y="88" fill="#8B93A7">ORG</text><text x="1040" y="88" fill="#F3EEFF">Microsoft</text><text x="972" y="110" fill="#8B93A7">SHEET</text><text x="1040" y="110" fill="#C084FC">01 / PROFILE</text><text x="972" y="132" fill="#8B93A7">UPTIME</text><text x="1040" y="132" fill="#34D399">commits today: 4</text>
+</g>
+<g class="ignite">
+  <text x="603" y="196" text-anchor="middle" font-family="ui-sans-serif, system-ui, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif" font-size="68" font-weight="700" fill="#C084FC" opacity="0.3" filter="url(#glow)">endlessYoung</text>
+  <text x="600" y="193" text-anchor="middle" font-family="ui-sans-serif, system-ui, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif" font-size="68" font-weight="700" fill="url(#title)">endlessYoung</text>
+</g>
+<g class="tagline" text-anchor="middle">
+  <text x="600" y="232" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#8B93A7" letter-spacing="1">Android Framework  ·  Compose  ·  Agents</text>
+  <text x="600" y="266" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#E23CA9"><tspan fill="#34D399">$ </tspan>Afternoon — shipping features.<tspan class="blink" fill="#C084FC"> ▍</tspan></text>
+</g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8B93A7" letter-spacing="2">
+  <rect x="44" y="314" width="1112" height="4" fill="#2A3348"/>
+  <rect class="grow" x="44" y="314" width="1112" height="4" fill="url(#beam)" style="animation-duration:4s;animation-delay:.3s"/>
+  <text x="44" y="306">BOOT</text>
+  <text class="in" style="animation-delay:4.30s" x="1156" y="306" text-anchor="end" fill="#34D399">READY · 100%</text>
+</g>
+
+</svg>

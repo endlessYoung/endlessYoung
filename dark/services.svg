@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="SystemServer starting tech stack services">
+<defs>
+  <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#7C5CFC"/><stop offset="50%" stop-color="#C084FC"/><stop offset="100%" stop-color="#E23CA9"/>
+  </linearGradient>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#1C2436" stroke-width="0.7" />
+  </pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3.5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  
+</defs>
+<style>
+  .in { animation: in .45s ease-out both; }
+  .rise { animation: rise .5s ease-out both; }
+  .grow { animation: grow .6s ease-out both; transform-box: fill-box; transform-origin: left center; }
+  .pulse { animation: pulse 2.2s ease-in-out infinite; }
+  .blink { animation: blink 1s steps(1) infinite; }
+  .dash { stroke-dasharray: 5 9; animation: flow 1.8s linear infinite; }
+  .scan { animation: scan 6s ease-in-out infinite; }
+  @keyframes in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes pulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+  @keyframes blink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+  @keyframes flow { to { stroke-dashoffset: -56; } }
+  @keyframes scan { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .2; } 100% { transform: translateY(var(--scan-h, 260px)); opacity: 0; } }
+
+  .out { animation: out .15s linear both; }
+  @keyframes out { from { opacity: 1; } to { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .out { display: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; }
+    .hide-reduced { display: none; }
+  }
+</style>
+<rect width="1200" height="420" fill="#07090F"/>
+<rect x="12" y="12" width="1176" height="396" fill="url(#grid)" stroke="#2A3348" stroke-width="1"/>
+<g fill="none" stroke="url(#beam)" stroke-width="2"><path d="M12 44V12H44"/><path d="M1188 44V12H1156"/><path d="M12 376V408H44"/><path d="M1188 376V408H1156"/></g>
+
+
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">
+  <text x="44" y="44" fill="#8B93A7" font-size="11" letter-spacing="2">STAGE 03 · SYSTEM SERVER</text>
+  <text x="44" y="64" fill="#F3EEFF" font-size="14"><tspan fill="#C084FC">SystemServer</tspan>: starting 26 services ...</text>
+  <text class="in" style="animation-delay:0.30s" x="44" y="84" fill="#8B93A7" font-size="10.5" letter-spacing="2">CORE · 4</text>
+<line x1="44" y1="92" x2="248" y2="92" stroke="#2A3348"/><g class="in" style="animation-delay:0.50s">
+  <text class="out" style="animation-delay:0.85s" x="44" y="118" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:0.85s" x="44" y="118" fill="#34D399">[ OK ]</text>
+  <rect x="98" y="109" width="9" height="9" rx="1.5" fill="#7F52FF"/>
+  <text x="114" y="118" fill="#F3EEFF">KotlinService</text>
+</g><g class="in" style="animation-delay:0.61s">
+  <text class="out" style="animation-delay:0.96s" x="44" y="145" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:0.96s" x="44" y="145" fill="#34D399">[ OK ]</text>
+  <rect x="98" y="136" width="9" height="9" rx="1.5" fill="#ED8B00"/>
+  <text x="114" y="145" fill="#F3EEFF">JavaService</text>
+</g><g class="in" style="animation-delay:0.72s">
+  <text class="out" style="animation-delay:1.07s" x="44" y="172" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:1.07s" x="44" y="172" fill="#34D399">[ OK ]</text>
+  <rect x="98" y="163" width="9" height="9" rx="1.5" fill="#3DDC84"/>
+  <text x="114" y="172" fill="#F3EEFF">AndroidFrameworkService</text>
+</g><g class="in" style="animation-delay:0.83s">
+  <text class="out" style="animation-delay:1.18s" x="44" y="199" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:1.18s" x="44" y="199" fill="#34D399">[ OK ]</text>
+  <rect x="98" y="190" width="9" height="9" rx="1.5" fill="#4285F4"/>
+  <text x="114" y="199" fill="#F3EEFF">ComposeService</text>
+</g><text class="in" style="animation-delay:0.80s" x="270" y="84" fill="#8B93A7" font-size="10.5" letter-spacing="2">WEB · 6</text>
+<line x1="270" y1="92" x2="474" y2="92" stroke="#2A3348"/><g class="in" style="animation-delay:0.94s">
+  <text class="out" style="animation-delay:1.29s" x="270" y="118" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:1.29s" x="270" y="118" fill="#34D399">[ OK ]</text>
+  <rect x="324" y="109" width="9" height="9" rx="1.5" fill="#3178C6"/>
+  <text x="340" y="118" fill="#F3EEFF">TypeScriptService</text>
+</g><g class="in" style="animation-delay:1.05s">
+  <text class="out" style="animation-delay:1.40s" x="270" y="145" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:1.40s" x="270" y="145" fill="#34D399">[ OK ]</text>
+  <rect x="324" y="136" width="9" height="9" rx="1.5" fill="#F7DF1E"/>
+  <text x="340" y="145" fill="#F3EEFF">JavaScriptService</text>
+</g><g class="in" style="animation-delay:1.16s">
+  <text class="out" style="animation-delay:1.51s" x="270" y="172" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:1.51s" x="270" y="172" fill="#34D399">[ OK ]</text>
+  <rect x="324" y="163" width="9" height="9" rx="1.5" fill="#61DAFB"/>
+  <text x="340" y="172" fill="#F3EEFF">ReactService</text>
+</g><g class="in" style="animation-delay:1.27s">
+  <text class="out" style="animation-delay:1.62s" x="270" y="199" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:1.62s" x="270" y="199" fill="#34D399">[ OK ]</text>
+  <rect x="324" y="190" width="9" height="9" rx="1.5" fill="#4FC08D"/>
+  <text x="340" y="199" fill="#F3EEFF">VueService</text>
+</g><g class="in" style="animation-delay:1.38s">
+  <text class="out" style="animation-delay:1.73s" x="270" y="226" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:1.73s" x="270" y="226" fill="#34D399">[ OK ]</text>
+  <rect x="324" y="217" width="9" height="9" rx="1.5" fill="#646CFF"/>
+  <text x="340" y="226" fill="#F3EEFF">ViteService</text>
+</g><g class="in" style="animation-delay:1.49s">
+  <text class="out" style="animation-delay:1.84s" x="270" y="253" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:1.84s" x="270" y="253" fill="#34D399">[ OK ]</text>
+  <rect x="324" y="244" width="9" height="9" rx="1.5" fill="#06B6D4"/>
+  <text x="340" y="253" fill="#F3EEFF">TailwindService</text>
+</g><text class="in" style="animation-delay:1.30s" x="496" y="84" fill="#8B93A7" font-size="10.5" letter-spacing="2">INFRA · 7</text>
+<line x1="496" y1="92" x2="700" y2="92" stroke="#2A3348"/><g class="in" style="animation-delay:1.60s">
+  <text class="out" style="animation-delay:1.95s" x="496" y="118" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:1.95s" x="496" y="118" fill="#34D399">[ OK ]</text>
+  <rect x="550" y="109" width="9" height="9" rx="1.5" fill="#3776AB"/>
+  <text x="566" y="118" fill="#F3EEFF">PythonService</text>
+</g><g class="in" style="animation-delay:1.71s">
+  <text class="out" style="animation-delay:2.06s" x="496" y="145" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:2.06s" x="496" y="145" fill="#34D399">[ OK ]</text>
+  <rect x="550" y="136" width="9" height="9" rx="1.5" fill="#339933"/>
+  <text x="566" y="145" fill="#F3EEFF">NodeService</text>
+</g><g class="in" style="animation-delay:1.82s">
+  <text class="out" style="animation-delay:2.17s" x="496" y="172" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:2.17s" x="496" y="172" fill="#34D399">[ OK ]</text>
+  <rect x="550" y="163" width="9" height="9" rx="1.5" fill="#FCC624"/>
+  <text x="566" y="172" fill="#F3EEFF">LinuxService</text>
+</g><g class="in" style="animation-delay:1.93s">
+  <text class="out" style="animation-delay:2.28s" x="496" y="199" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:2.28s" x="496" y="199" fill="#34D399">[ OK ]</text>
+  <rect x="550" y="190" width="9" height="9" rx="1.5" fill="#F05032"/>
+  <text x="566" y="199" fill="#F3EEFF">GitService</text>
+</g><g class="in" style="animation-delay:2.04s">
+  <text class="out" style="animation-delay:2.39s" x="496" y="226" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:2.39s" x="496" y="226" fill="#34D399">[ OK ]</text>
+  <rect x="550" y="217" width="9" height="9" rx="1.5" fill="#2496ED"/>
+  <text x="566" y="226" fill="#F3EEFF">DockerService</text>
+</g><g class="in" style="animation-delay:2.15s">
+  <text class="out" style="animation-delay:2.50s" x="496" y="253" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:2.50s" x="496" y="253" fill="#34D399">[ OK ]</text>
+  <rect x="550" y="244" width="9" height="9" rx="1.5" fill="#6CCB4B"/>
+  <text x="566" y="253" fill="#F3EEFF">GradleService</text>
+</g><g class="in" style="animation-delay:2.26s">
+  <text class="out" style="animation-delay:2.61s" x="496" y="280" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:2.61s" x="496" y="280" fill="#34D399">[ OK ]</text>
+  <rect x="550" y="271" width="9" height="9" rx="1.5" fill="#0B7BC1"/>
+  <text x="566" y="280" fill="#F3EEFF">SQLiteService</text>
+</g><text class="in" style="animation-delay:1.80s" x="722" y="84" fill="#8B93A7" font-size="10.5" letter-spacing="2">TOOLS · 4</text>
+<line x1="722" y1="92" x2="926" y2="92" stroke="#2A3348"/><g class="in" style="animation-delay:2.37s">
+  <text class="out" style="animation-delay:2.72s" x="722" y="118" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:2.72s" x="722" y="118" fill="#34D399">[ OK ]</text>
+  <rect x="776" y="109" width="9" height="9" rx="1.5" fill="#007ACC"/>
+  <text x="792" y="118" fill="#F3EEFF">VSCodeService</text>
+</g><g class="in" style="animation-delay:2.48s">
+  <text class="out" style="animation-delay:2.83s" x="722" y="145" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:2.83s" x="722" y="145" fill="#34D399">[ OK ]</text>
+  <rect x="776" y="136" width="9" height="9" rx="1.5" fill="#FE315D"/>
+  <text x="792" y="145" fill="#F3EEFF">IntelliJService</text>
+</g><g class="in" style="animation-delay:2.59s">
+  <text class="out" style="animation-delay:2.94s" x="722" y="172" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:2.94s" x="722" y="172" fill="#34D399">[ OK ]</text>
+  <rect x="776" y="163" width="9" height="9" rx="1.5" fill="#FF6C37"/>
+  <text x="792" y="172" fill="#F3EEFF">PostmanService</text>
+</g><g class="in" style="animation-delay:2.70s">
+  <text class="out" style="animation-delay:3.05s" x="722" y="199" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:3.05s" x="722" y="199" fill="#34D399">[ OK ]</text>
+  <rect x="776" y="190" width="9" height="9" rx="1.5" fill="#F24E1E"/>
+  <text x="792" y="199" fill="#F3EEFF">FigmaService</text>
+</g><text class="in" style="animation-delay:2.30s" x="948" y="84" fill="#8B93A7" font-size="10.5" letter-spacing="2">CONCEPTS · 5</text>
+<line x1="948" y1="92" x2="1152" y2="92" stroke="#2A3348"/><g class="in" style="animation-delay:2.81s">
+  <text class="out" style="animation-delay:3.16s" x="948" y="118" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:3.16s" x="948" y="118" fill="#34D399">[ OK ]</text>
+  <rect x="1002" y="109" width="9" height="9" rx="1.5" fill="#3DDC84"/>
+  <text x="1018" y="118" fill="#F3EEFF">Jetpack</text>
+</g><g class="in" style="animation-delay:2.92s">
+  <text class="out" style="animation-delay:3.27s" x="948" y="145" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:3.27s" x="948" y="145" fill="#34D399">[ OK ]</text>
+  <rect x="1002" y="136" width="9" height="9" rx="1.5" fill="#7F52FF"/>
+  <text x="1018" y="145" fill="#F3EEFF">Coroutines</text>
+</g><g class="in" style="animation-delay:3.03s">
+  <text class="out" style="animation-delay:3.38s" x="948" y="172" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:3.38s" x="948" y="172" fill="#34D399">[ OK ]</text>
+  <rect x="1002" y="163" width="9" height="9" rx="1.5" fill="#C084FC"/>
+  <text x="1018" y="172" fill="#F3EEFF">MVVM</text>
+</g><g class="in" style="animation-delay:3.14s">
+  <text class="out" style="animation-delay:3.49s" x="948" y="199" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:3.49s" x="948" y="199" fill="#34D399">[ OK ]</text>
+  <rect x="1002" y="190" width="9" height="9" rx="1.5" fill="#E23CA9"/>
+  <text x="1018" y="199" fill="#F3EEFF">Agents</text>
+</g><g class="in" style="animation-delay:3.25s">
+  <text class="out" style="animation-delay:3.60s" x="948" y="226" fill="#8B93A7">[ .. ]</text>
+  <text class="in" style="animation-delay:3.60s" x="948" y="226" fill="#34D399">[ OK ]</text>
+  <rect x="1002" y="217" width="9" height="9" rx="1.5" fill="#F59E0B"/>
+  <text x="1018" y="226" fill="#F3EEFF">RAG</text>
+</g>
+  <line x1="44" y1="326" x2="1156" y2="326" stroke="#2A3348"/>
+  <g class="in" style="animation-delay:3.76s">
+    <circle class="pulse" cx="49" cy="351" r="4" fill="#34D399" filter="url(#glow)"/>
+    <text x="62" y="355" fill="#F3EEFF">26 services started in 2.84s  <tspan fill="#8B93A7">·</tspan>  <tspan fill="#34D399">sys.boot_completed=1</tspan></text>
+  </g>
+</g>
+
+</svg>

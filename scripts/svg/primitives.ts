@@ -81,7 +81,7 @@ export function frame(o: FrameOptions): string {
     ? `<rect class="scan hide-reduced" x="${inset}" y="${inset}" width="${iw}" height="14" fill="url(#beam)" opacity="0" style="--scan-h:${ih - 14}px"/>`
     : '';
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${esc(o.label ?? o.title ?? 'endlessYoung')}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${esc(o.label ?? o.title ?? 'endlessYoung')}">
 <defs>
   <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
     <stop offset="0%" stop-color="${b0}"/><stop offset="50%" stop-color="${b1}"/><stop offset="100%" stop-color="${b2}"/>
@@ -101,7 +101,7 @@ export function frame(o: FrameOptions): string {
 <g fill="none" stroke="url(#beam)" stroke-width="2">${corners}</g>
 ${scan}
 ${o.body}
-${t.name === 'light' ? titleBlock(t, w, h, inset, o.sheet, o.title) : ''}
+${t.name === 'light' && w >= 1000 ? titleBlock(t, w, h, inset, o.sheet, o.title) : ''}
 </svg>`;
 }
 

@@ -18,8 +18,13 @@ describe('frame', () => {
   }
 
   it('adds the blueprint title block only in light theme', () => {
-    const args = { width: 600, height: 200, sheet: 3, title: 'TEST', body: '' };
+    const args = { width: 1200, height: 200, sheet: 3, title: 'TEST', body: '' };
     expect(frame({ ...args, theme: themes.light })).toContain('DRAWN BY endlessYoung');
     expect(frame({ ...args, theme: themes.dark })).not.toContain('DRAWN BY endlessYoung');
+  });
+
+  it('omits the title block on narrow images', () => {
+    const svg = frame({ theme: themes.light, width: 380, height: 120, body: '' });
+    expect(svg).not.toContain('DRAWN BY endlessYoung');
   });
 });

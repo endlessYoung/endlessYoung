@@ -4,11 +4,13 @@ import { dumpsys } from './content';
 import { OUTPUT_BASE, layout, type Cell } from './layout';
 
 function picture(base: string, c: Cell): string {
-  const img = `<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="${base}dark/${c.file}">
-  <source media="(prefers-color-scheme: light)" srcset="${base}light/${c.file}">
-  <img src="${base}dark/${c.file}" width="${c.width}" alt="${c.alt.replace(/"/g, '&quot;')}">
-</picture>`;
+  const img = [
+    '<picture>',
+    `<source media="(prefers-color-scheme: dark)" srcset="${base}dark/${c.file}">`,
+    `<source media="(prefers-color-scheme: light)" srcset="${base}light/${c.file}">`,
+    `<img src="${base}dark/${c.file}" width="${c.width}" alt="${c.alt.replace(/"/g, '&quot;')}">`,
+    '</picture>',
+  ].join('');
   return c.link ? `<a href="${c.link}">${img}</a>` : img;
 }
 

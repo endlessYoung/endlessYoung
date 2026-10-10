@@ -64,7 +64,7 @@ export function render(t: Theme, trace: Trace | undefined): string {
 
   const { days, weekly } = trace;
   const step = LANE_W / days.length;
-  const barW = Math.max(1, step * 0.72);
+  const barW = Math.max(1, step - 0.35);
   const maxLog = Math.log2(Math.max(...days.map((d) => d.count)) + 1) || 1;
   const laneH = FRAMES_BOTTOM - FRAMES_TOP - 8;
 
@@ -72,10 +72,10 @@ export function render(t: Theme, trace: Trace | undefined): string {
     .map((d, i) => {
       const x = (LANE_X + i * step + (step - barW) / 2).toFixed(2);
       if (d.count === 0) {
-        return `<rect x="${x}" y="${FRAMES_BOTTOM - 5}" width="${barW.toFixed(2)}" height="5" fill="${t.jank}"/>`;
+        return `<rect x="${x}" y="${FRAMES_BOTTOM - 7}" width="${barW.toFixed(2)}" height="7" fill="${t.jank}" fill-opacity="0.75"/>`;
       }
       const k = Math.log2(d.count + 1) / maxLog;
-      const h = Math.max(3, k * laneH);
+      const h = Math.max(12, k * laneH);
       return `<rect x="${x}" y="${(FRAMES_BOTTOM - h).toFixed(2)}" width="${barW.toFixed(2)}" height="${h.toFixed(2)}" fill="${ramp(t, k)}"/>`;
     })
     .join('');

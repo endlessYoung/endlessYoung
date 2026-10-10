@@ -66,11 +66,17 @@ for (const theme of Object.values(themes)) {
     });
 
     it('logcat with posts', () => {
-      const svg = logcat.render(theme, posts);
+      const svg = logcat.render(theme, posts, new Date('2026-10-10T08:00:00Z'));
       expectValidSvg(svg, 1200, 280);
       expect(svg).toContain('&lt;深入&gt; &amp;');
       expect(svg).toContain('…');
-      expect(svg).toContain('NEW');
+      expect(svg).toContain('>NEW<');
+    });
+
+    it('logcat labels stale posts as LATEST', () => {
+      const svg = logcat.render(theme, posts, new Date('2027-01-01T00:00:00Z'));
+      expect(svg).toContain('>LATEST<');
+      expect(svg).not.toContain('>NEW<');
     });
 
     it('logcat placeholder', () => {

@@ -12,7 +12,9 @@ function stamp(date: Date, i: number): string {
   return `${p(local.getUTCMonth() + 1)}-${p(local.getUTCDate())} ${p(local.getUTCHours())}:${p(local.getUTCMinutes())}:${p(local.getUTCSeconds())}.${p((i * 137 + 42) % 1000, 3)}`;
 }
 
-export function render(t: Theme, posts: Post[] | undefined): string {
+const FRESH_MS = 30 * 86_400_000;
+
+export function render(t: Theme, posts: Post[] | undefined, now = new Date()): string {
   const rowY = (i: number) => 92 + i * 26;
 
   const rows = posts?.length
@@ -22,9 +24,11 @@ export function render(t: Theme, posts: Post[] | undefined): string {
           const levelColor = i === 0 ? t.accent2 : t.ok;
           const y = rowY(i);
           const title = esc(`《${truncate(post.title, 36)}》`);
+          const tag = now.getTime() - post.date.getTime() < FRESH_MS ? 'NEW' : 'LATEST';
+          const badgeW = tag.length * 7 + 14;
           const badge =
             i === 0
-              ? `<rect x="${W - 92}" y="${y - 12}" width="40" height="16" rx="8" fill="${t.accent2}"/><text x="${W - 72}" y="${y}" text-anchor="middle" fill="${t.bg}" font-size="9.5" font-weight="700">NEW</text>`
+              ? `<rect x="${W - 52 - badgeW}" y="${y - 12}" width="${badgeW}" height="16" rx="8" fill="${t.accent2}"/><text x="${W - 52 - badgeW / 2}" y="${y}" text-anchor="middle" fill="${t.bg}" font-size="9.5" font-weight="700">${tag}</text>`
               : '';
           return `<g class="in" style="animation-delay:${(0.3 + i * 0.35).toFixed(2)}s">
   ${i === 0 ? `<rect x="36" y="${y - 17}" width="${W - 72}" height="24" fill="${t.accent2}" fill-opacity="0.08"/>` : ''}
